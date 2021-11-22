@@ -9,7 +9,7 @@
 
     public class Writer
     {
-        private readonly string path = "Persons.csv";
+        private readonly string _path = "Persons.csv";
 
         private readonly List<Person> _persons;
 
@@ -20,7 +20,7 @@
 
         public async Task Convert()
         {
-            using StreamWriter writer = File.CreateText(path);
+            using StreamWriter writer = File.CreateText(_path);
 
             await writer.WriteLineAsync("Name; Age; Position");
 
